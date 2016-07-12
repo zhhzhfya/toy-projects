@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2011 Ruaho All rights reserved.
  */
-package com.toy.core.util;
+package com.toy.util;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.toy.core.respontory;
+package com.toy.respontory.abservable;
 
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 import rx.Observable;
 
-import com.toy.core.util.Constant;
+import com.toy.util.Constant;
 
 
 public class DatabaseObservable extends CacheObservable {

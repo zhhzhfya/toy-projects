@@ -1,4 +1,4 @@
-package com.toy.core.respontory;
+package com.toy.respontory.abservable;
 
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
@@ -7,31 +7,34 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import com.toy.util.Constant;
+
 import rx.Observable;
 
-public class MemoryCacheObservable extends CacheObservable {
+public class J2CacheObservable extends CacheObservable {
 
-	private static Logger logger = Logger.getLogger(MemoryCacheObservable.class.getName());
-	public static final int DEFAULT_CACHE_SIZE = (24 /* MiB */* 1024 * 1024);
+	private static Logger logger = Logger.getLogger(J2CacheObservable.class.getName());
+
 	private static Map<String, JsonObject> cache = new HashMap<String, JsonObject>();
-	private Vertx vertx;
+	Vertx vertx;
 
-	public MemoryCacheObservable(Vertx vertx) {
+	public J2CacheObservable(Vertx vertx) {
 		this.vertx = vertx;
 	}
 
 	@Override
 	public Observable<JsonObject> getObservable(JsonObject param) {
 		return Observable.create(subscriber -> {
-			logger.info("search in memory");
+			logger.info("缓存查找");
+			JsonObject bean = cache.get(param.getString(Constant._PK_));
 			if (!subscriber.isUnsubscribed()) {
-				subscriber.onNext(new JsonObject());
+				subscriber.onNext(bean);
 				subscriber.onCompleted();
 			}
 		});
 	}
 
 	public void putData(JsonObject data) {
-		cache.put(data.getString("_PK_"), data);
+		cache.put(data.getString(Constant._PK_), data);
 	}
 }
