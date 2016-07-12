@@ -1,0 +1,44 @@
+<!-- 顶部菜单 -->
+<div style="padding: 5px; border: 0px solid #ddd">
+	<a href="#" class="easyui-linkbutton" data-options="plain:true">首页</a> 
+	<a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-edit'">设计</a>
+	<a href="#" class="easyui-menubutton" data-options="menu:'#mmsys'">系统</a>
+	<a href="#" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'icon-help'">帮助</a>
+	<a href="#" class="easyui-menubutton" data-options="menu:'#mm3'">关于</a>
+	<a href="#" class="easyui-linkbutton" data-options="plain:true" onclick="menuHandler()">添加tab</a>
+</div>
+<div id="mm1" style="width: 150px;">
+	<div onclick="menuHandler()">对象</div>
+	<div>关系</div>
+	<div>行为</div>
+	<div class="menu-sep"></div>
+	<div>
+		<span>工具</span>
+		<div style="width: 150px;">
+			<div>Address</div>
+			<div>Link</div>
+			<div>Navigation Toolbar</div>
+			<div>Bookmark Toolbar</div>
+			<div class="menu-sep"></div>
+			<div>New Toolbar...</div>
+		</div>
+	</div>
+	<div data-options="iconCls:'icon-remove'">删除</div>
+	<div>操作历史</div>
+</div>
+<div id="mmsys" style="width: 100px;">
+	<div>服务</div>
+	<div>字典</div>
+	<div>权限</div>
+	<div>日志</div>
+	<div>搜索</div>
+</div>
+<div id="mm2" style="width: 100px;">
+	<div>帮助</div>
+	<div>更新</div>
+	<div>关于</div>
+</div>
+<div id="mm3" class="menu-content" style="padding: 10px; text-align: left">
+	<img src="/img/CEF.png" style="width: 50px; height: 50px">
+	<p style="font-size: 14px; color: #444;">管理平台0.1v</p>
+</div>

@@ -1,0 +1,29 @@
+{
+	"SERV_ID": "SY_SERV",
+	"SERV_CODE": "SY_SERV",
+	"SERV_NAME": "服务配置",
+	"RESOURCE_TYPE": "JSON",
+	"RESOURCE_ID": "1",
+	"CREATE_TIME": "2016-06-23 17:13:17:513",
+	"SY_SERV_ITEM": [{
+		"SERV_ID": "SY_SERV",
+		"OBJ_ID": "SY_SERV",
+		"ITEM_ID": "SERV_ID",
+		"ITEM_NAME": "服务id",
+		"FIELD_TYPE": "STR",
+		"INPUT_TYPE": "1",
+		"INPUT_MODE": "1",
+		"INPUT_CONFIG": "",
+		"INPUT_DEFAULT": ""
+	}, {
+		"SERV_ID": "SY_SERV",
+		"OBJ_ID": "SY_SERV",
+		"ITEM_ID": "SERV_CODE",
+		"ITEM_NAME": "服务CODE",
+		"FIELD_TYPE": "STR",
+		"INPUT_TYPE": "1",
+		"INPUT_MODE": "1",
+		"INPUT_CONFIG": "",
+		"INPUT_DEFAULT": ""
+	}]
+}

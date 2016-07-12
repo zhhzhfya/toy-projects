@@ -1,0 +1,8 @@
+<META>
+	<SY_META>
+		<NAME NAME="名称" TYPE="STR" SIZE="" DESC=""/>
+		<TYPE NAME="类型" TYPE="STR" SIZE="" DESC=""/>
+		<SIZE NAME="大小" TYPE="STR" SIZE="" DESC=""/>
+		<DESC NAME="描述" TYPE="STR" SIZE="" DESC=""/>
+	</SY_META>
+</META>

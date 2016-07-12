@@ -1,0 +1,27 @@
+<% if(config.north) { %>
+<div id="<%=modelCode%>north" data-options="region:'north'" style="height: 37px">
+	<!-- 顶部菜单 -->
+</div>
+<% } %>
+<% if(config.east) { %>
+<div id="<%=modelCode%>east" data-options="region:'east',split:true" title="East" style="width:180px;">
+	<!-- 右边 -->
+</div>
+<% } %>
+<% if(config.west) { %>
+<div id="<%=modelCode%>west" data-options="region:'west',split:true" title="West" style="width:100px;">
+	<!-- 左边 -->
+</div>
+<% } %>
+<% if(config.center) { %>
+<div id="<%=modelCode%>center" data-options="region:'center',fit:true" >
+	<!-- 中间区域 -->
+	正在加载...
+</div>
+<% } %>
+<% if(config.south) { %>
+<div id="<%=modelCode%>south" data-options="region:'south'" style="height: 25px; padding: 0px;">
+	<!-- 底部 -->
+	<div id="sysinfo" class="easyui-panel" style="padding: 5px;"></div>
+</div>
+<% } %>

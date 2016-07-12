@@ -1,0 +1,71 @@
+<!-- Main content -->
+<section class="content" style="padding: 2px;" ng-controller="formcardctrl">
+	<!-- Custom tabs (Charts with tabs)-->
+	<div class="nav-tabs-custom">
+		<!-- Tabs within a box -->
+		<ul class="nav nav-tabs pull-left">
+			<li class="active"><a href="#serv-design" data-toggle="tab" style="padding: 5px 10px;">服务定义</a></li>
+			<li><a href="#serv-item" data-toggle="tab" style="padding: 5px 10px;">服务字段</a></li>
+			<li><a href="#serv-button" data-toggle="tab" style="padding: 5px 10px;">服务按钮</a></li>
+			<li><a href="#serv-link" data-toggle="tab" style="padding: 5px 10px;">关联服务</a></li>
+		</ul>
+		<div class="tab-content no-padding">
+			<!-- Morris chart - Sales -->
+			<div class="chart tab-pane active" id="serv-design" style="position: relative;overflow: auto;">
+				<div class="row">
+					<!-- left column -->
+					<div class="col-md-12">
+						<!-- general form elements -->
+						<div class="box" style="border: 0px;">
+							<!-- <div class="box-header">
+								<h3 class="box-title">服务定义</h3>
+							</div> -->
+							<!-- /.box-header -->
+							<div style="margin: 10px 10px">
+								<div class="btn-group">
+									<button type="button" class="btn btn-block btn-default btn-sm" ng-click="goObjectLink()">保存</button>
+								</div>
+								<div class="btn-group">
+									<button type="button" class="btn btn-block btn-default btn-sm">另保存为</button>
+								</div>
+								<div class="btn-group">
+									<button type="button" class="btn btn-block btn-default btn-sm" ng-click="goBack()">返回</button>
+								</div>
+							</div>
+							<!-- form start -->
+							<form role="form">
+								<div class="box-body">
+									<div class="form-group col-md-{{colwidth * item.ITEM_CARD_COLS}}" ng-repeat="item in items" ng-switch on="item.ITEM_INPUT_TYPE">
+										<div ng-switch-default>
+											<label for="{{item.ITEM_CODE}}">{{item.ITEM_NAME}}</label> <input type="text" class="form-control" id="{{item.ITEM_CODE}}" placeholder="输入{{item.ITEM_NAME}}">
+										</div>
+										<div ng-switch-when="1">
+											<label for="{{item.ITEM_CODE}}">{{item.ITEM_NAME}}</label> <input type="text" class="form-control" id="{{item.ITEM_CODE}}" placeholder="输入{{item.ITEM_NAME}}">
+										</div>
+										<div ng-switch-when="5">
+											<label for="{{item.ITEM_CODE}}">{{item.ITEM_NAME}}</label>
+											<textarea type="text" class="form-control" id="{{item.ITEM_CODE}}" placeholder="输入{{item.ITEM_NAME}}" rows=5></textarea>
+										</div>
+									</div>
+								</div>
+								<!-- /.box-body -->
+
+								<div class="box-footer">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</form>
+						</div>
+						<!-- /.box -->
+
+					</div>
+				</div>
+			</div>
+			<div class="chart tab-pane" id="serv-item" style="position: relative; height: 300px;">serv-item</div>
+			<div class="chart tab-pane" id="serv-button" style="position: relative; height: 300px;">serv-button</div>
+			<div class="chart tab-pane" id="serv-link" style="position: relative; height: 300px;">serv-link</div>
+		</div>
+	</div>
+
+
+</section>
+<!-- /.content -->
