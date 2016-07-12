@@ -10,6 +10,7 @@
 
 5、启动toy-web
 
+![Alt text](https://github.com/zhhzhfya/toy-projects/blob/master/imgs/p1.jpg)
 
 ###  toy-base
 基础服务：负责基础功能启动、分布式集群、发布管理界面的启动
