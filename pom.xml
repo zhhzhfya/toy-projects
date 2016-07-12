@@ -15,7 +15,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<modules>
+		<module>toy-common</module>
 		<module>toy-base</module>
+		<module>toy-respontory</module>
 		<module>toy-web</module>
 		<module>toy-dev</module>
 		<module>toy-core</module>
