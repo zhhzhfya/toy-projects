@@ -1,22 +1,14 @@
 package com.toy.verticle;
 
+import io.netty.util.Constant;
 import io.vertx.core.AbstractVerticle;
-import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.shareddata.LocalMap;
 import io.vertx.core.shareddata.SharedData;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.handler.StaticHandler;
-import io.vertx.ext.web.handler.sockjs.BridgeOptions;
-import io.vertx.ext.web.handler.sockjs.PermittedOptions;
-import io.vertx.ext.web.handler.sockjs.SockJSHandler;
 
-import java.text.DateFormat;
-import java.time.Instant;
-import java.util.Date;
 import java.util.logging.Logger;
-
-import com.toy.core.util.Constant;
 
 public class WebWorker extends AbstractVerticle {
 
