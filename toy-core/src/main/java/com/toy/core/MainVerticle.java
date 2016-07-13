@@ -9,11 +9,8 @@ import io.vertx.core.json.JsonObject;
 
 import java.util.logging.Logger;
 
-import org.hsqldb.lib.StopWatch;
-
 import com.toy.core.ui.MainUI;
 import com.toy.core.util.Runner;
-import com.toy.verticle.TimerVerticle;
 
 public class MainVerticle extends AbstractVerticle {
 

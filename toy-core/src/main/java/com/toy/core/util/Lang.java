@@ -402,7 +402,7 @@ public class Lang {
      * @return 转换后的字符串
      */
     public static String arrayJoin(String[] array) {
-        return arrayJoin(array, Constant.SEPARATOR);
+        return arrayJoin(array, ",");
     }
     
     /**

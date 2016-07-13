@@ -1,4 +1,4 @@
-package com.toy.verticle;
+package com.toy.dev.verticle;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.json.JsonObject;

@@ -1,4 +1,4 @@
-package com.toy.core.util;
+package com.toy.util;
 
 import net.oschina.j2cache.CacheChannel;
 import net.oschina.j2cache.CacheObject;

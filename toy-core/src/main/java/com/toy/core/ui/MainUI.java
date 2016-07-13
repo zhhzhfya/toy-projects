@@ -11,31 +11,26 @@ import java.awt.event.ActionListener;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
 import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JToolBar;
 import javax.swing.JTree;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.JToolBar;
-import javax.swing.JSeparator;
-import javax.swing.ImageIcon;
-
-import com.toy.core.util.CacheUtil;
-
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-
-import net.oschina.j2cache.CacheObject;
 
 public class MainUI extends JFrame {
 
@@ -223,7 +218,7 @@ public class MainUI extends JFrame {
 		JButton btnNewButton_2 = new JButton("test cache");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CacheUtil.test();
+				
 			}
 		});
 		btnNewButton_2.setIcon(new ImageIcon(MainUI.class.getResource("/com/toy/core/ui/img/world_go.png")));
@@ -253,8 +248,8 @@ public class MainUI extends JFrame {
 		btnNewButton_3.setIcon(new ImageIcon(MainUI.class.getResource("/com/toy/core/ui/img/zoom.png")));
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CacheObject cache = CacheUtil.getCache(cacheName.getText(), key.getText());
-				cacheResult.setText(cache.getValue().toString());
+//				CacheObject cache = CacheUtil.getCache(cacheName.getText(), key.getText());
+//				cacheResult.setText(cache.getValue().toString());
 			}
 		});
 		toolBar_1.add(btnNewButton_3);

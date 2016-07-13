@@ -34,8 +34,8 @@ public class WebWorker extends AbstractVerticle {
 
 	private void setSyConfig(JsonObject config) {
 		SharedData sd = vertx.sharedData();
-		LocalMap<String, Object> syConfig = sd.getLocalMap(Constant.SY_CONFIG);
-		syConfig.put(Constant.WEB_PORT, config.getInteger("port", 80));
+		LocalMap<String, Object> syConfig = sd.getLocalMap("SY_CONFIG");
+		syConfig.put("WEB_PORT", config.getInteger("port", 80));
 	}
 
 }

@@ -18,7 +18,7 @@ public class MetaFileUtils {
 		Element root = document.getRootElement();
 		Element metaElement = (Element) root.elements().get(0);
 		JsonObject meta = new JsonObject().put(metaElement.getName(), readMetas(metaElement));
-		//System.out.println("------------>" + meta);
+		System.out.println("------------>" + meta);
 		return meta;
 	}
 

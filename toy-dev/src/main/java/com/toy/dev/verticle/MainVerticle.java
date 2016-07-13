@@ -13,6 +13,7 @@ public class MainVerticle extends AbstractVerticle {
 		
 		vertx.deployVerticle(SysWorker.class.getName(), options);
 		vertx.deployVerticle(MetaVerticle.class.getName(), options);
+		vertx.deployVerticle(StorageWorker.class.getName(), options);
 	}
 
 }
