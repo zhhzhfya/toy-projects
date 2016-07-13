@@ -18,6 +18,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-maven-service-factory</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>

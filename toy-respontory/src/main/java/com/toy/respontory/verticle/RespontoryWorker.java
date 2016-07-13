@@ -9,10 +9,6 @@ import com.toy.respontory.abservable.Respontory;
 
 public class RespontoryWorker extends AbstractVerticle {
 
-	public RespontoryWorker() {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public void start() throws Exception {
 		vertx.eventBus().consumer("data.query", message -> {

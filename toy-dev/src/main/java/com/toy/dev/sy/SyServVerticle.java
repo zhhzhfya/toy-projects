@@ -115,6 +115,8 @@ public class SyServVerticle extends AbstractVerticle {
 
 		Integer port = 8080;// (Integer) syConfig.get(Constant.WEB_PORT);
 		vertx.createHttpServer().requestHandler(router::accept).listen(port);
-		System.out.println(String.format("*************** SyServVerticle ok 端口 %d*********************", port));
+		System.out.println(String.format("******************************************************************"));
+		System.out.println(String.format("*************** SyServVerticle ok 端口 %d *********************", port));
+		System.out.println(String.format("******************************************************************"));
 	}
 }

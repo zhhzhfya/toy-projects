@@ -29,10 +29,20 @@ public class JdbcWorker extends io.vertx.rxjava.core.AbstractVerticle {
 	@Override
 	public void start() throws Exception {
 		JsonObject config = vertx.getOrCreateContext().config();
+		JsonObject jdbcCfg = null;
+		for (String key : config.getMap().keySet()) {
+			if (key.startsWith("jdbc")) {
+				jdbcCfg = config.getJsonObject(key);
+			}
+		}
+		if (jdbcCfg == null) {
+			logger.warning("没有找到jdbc的配置文件");
+			return;
+		}
 		String test = config.getString("test");
 //		config = new JsonObject().put("url", "jdbc:hsqldb:mem:test?shutdown=true")
 //		        .put("driver_class", "org.hsqldb.jdbcDriver");
-		client = JDBCClient.createShared(vertx, config);
+		client = JDBCClient.createShared(vertx, jdbcCfg);
 		
 //		client.getConnectionObservable().subscribe(
 //	        conn -> {

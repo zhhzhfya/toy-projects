@@ -1,4 +1,4 @@
-package com.toy.dev.verticle;
+package com.toy.respontory.verticle;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.DeploymentOptions;
@@ -10,9 +10,9 @@ public class MainVerticle extends AbstractVerticle {
 	public void start() throws Exception {
 		JsonObject config = vertx.getOrCreateContext().config();
 		DeploymentOptions options = new DeploymentOptions().setWorker(true).setConfig(config);
-		
-		vertx.deployVerticle(SysWorker.class.getName(), options);
-		vertx.deployVerticle(MetaVerticle.class.getName(), options);
+		vertx.deployVerticle(JdbcWorker.class.getName(), options);
+		vertx.deployVerticle(LogWorker.class.getName(), options);
+		vertx.deployVerticle(RedisWorker.class.getName(), options);
+		vertx.deployVerticle(RespontoryWorker.class.getName(), options);
 	}
-
 }

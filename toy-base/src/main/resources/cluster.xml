@@ -28,7 +28,7 @@
         <!-- 局域网里其他机器ip -->
         <!-- <interface>100.100.100.28</interface>
         <interface>100.100.100.30</interface> -->
-        <members>100.100.100.22</members>
+        <members>192.168.199.219</members>
         <!-- <interface>192.168.199.215</interface> -->
         <!-- <interface>192.168.199.213</interface> -->
         <!-- <interface>192.168.199.211</interface> -->

@@ -5,8 +5,10 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.redis.RedisClient;
 import io.vertx.redis.RedisOptions;
 
-public class RedisWorker extends AbstractVerticle {
+import java.util.logging.Logger;
 
+public class RedisWorker extends AbstractVerticle {
+	private static Logger logger = Logger.getLogger(RedisWorker.class.getName());
 	public RedisClient redis;
 
 	public RedisWorker() {
@@ -16,9 +18,19 @@ public class RedisWorker extends AbstractVerticle {
 	@Override
 	public void start() throws Exception {
 		JsonObject config = vertx.getOrCreateContext().config();
+		JsonObject redisCfg = null;
+		for (String key : config.getMap().keySet()) {
+			if (key.startsWith("redis")) {
+				redisCfg = config.getJsonObject(key);
+			}
+		}
+		if (redisCfg == null) {
+			logger.warning("没有找到redis的配置文件");
+			return;
+		}
 		RedisOptions options = new RedisOptions();
-		options.setHost(config.getString("host"));
-		options.setPort(config.getInteger("port"));
+		options.setHost(redisCfg.getString("host"));
+		options.setPort(redisCfg.getInteger("port"));
 		redis = RedisClient.create(vertx, options);
 
 		redis.set("Test", "hello", r -> {
